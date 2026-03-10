@@ -92,6 +92,7 @@
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="64dp"
+        android:paddingHorizontal="85dp"
         android:background="@android:color/white"
         app:itemIconTint="#333333"
         app:itemTextColor="#333333"
