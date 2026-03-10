@@ -8,5 +8,5 @@
     <item
         android:id="@+id/menu_cart"
         android:title="Корзина"
-        android:icon="@drawable/ic_cart"/>
+        android:icon="@drawable/frame"/>
 </menu>

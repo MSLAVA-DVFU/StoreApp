@@ -31,6 +31,7 @@
             <TextView
                 android:id="@+id/productTitle"
                 android:textSize="18sp"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -43,15 +44,52 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
-            <TextView
-                android:id="@+id/productPrice"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#8B5E3C"
-                android:layout_marginTop="12dp"
+            <Button
+                android:id="@+id/priceButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="40dp"
+                android:text="14 990 ₽"
+                android:textStyle="bold"
+                android:textColor="#623A29"
+                android:background="@drawable/rounded_ui_cart_button"
+                android:backgroundTint="#F6EFEB"
+                android:layout_marginTop="12dp"/>
 
+            <LinearLayout
+                android:id="@+id/quantityLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/minusBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#F6F6F6"
+                    android:text="—"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/quantityText"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#623A29"
+                    android:textStyle="bold"
+                    android:background="#F6F6F6"
+                    android:textSize="16sp"/>
+
+                <Button
+                    android:id="@+id/plusBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#F6F6F6"
+                    android:text="+" />
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

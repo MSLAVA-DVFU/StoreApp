@@ -6,10 +6,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.squareup.picasso.Picasso;
 import android.graphics.Color;
 import android.widget.Button;
-import android.view.View;
+
 
 public class ProductActivity extends AppCompatActivity {
     private Button selectedSizeButton = null;
@@ -17,7 +16,7 @@ public class ProductActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.bottom_sheet_product);
 
         ImageView image = findViewById(R.id.detailImage);
         TextView title = findViewById(R.id.detailTitle);
@@ -40,16 +39,16 @@ public class ProductActivity extends AppCompatActivity {
 
             sizeButton.setOnClickListener(v -> {
 
-                // Сброс предыдущей кнопки
+
                 if (selectedSizeButton != null) {
                     selectedSizeButton.setBackgroundTintList(
-                            android.content.res.ColorStateList.valueOf(Color.parseColor("#E5E5E5")));
+                            android.content.res.ColorStateList.valueOf(Color.parseColor("#F6F6F6")));
                     selectedSizeButton.setTextColor(Color.BLACK);
                 }
 
-                // Установка новой выбранной
+
                 sizeButton.setBackgroundTintList(
-                        android.content.res.ColorStateList.valueOf(Color.parseColor("#8B5E3C")));
+                        android.content.res.ColorStateList.valueOf(Color.parseColor("#623A29")));
                 sizeButton.setTextColor(Color.WHITE);
 
                 selectedSizeButton = sizeButton;
@@ -62,7 +61,7 @@ public class ProductActivity extends AppCompatActivity {
 
         addToCart.setText("В корзину · " + priceValue + " ₽");
 
-        description.setText(getIntent().getStringExtra("description"));
+        description.setText(getIntent().getStringExtra("detailed_description"));
 
         int imageRes = getIntent().getIntExtra("image", 0);
 
